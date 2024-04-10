@@ -169,13 +169,13 @@ for G1, G2 in tqdm(sample):
 #%% Evaluate results
 
 DIR = "/home/giovanni/Nextcloud/Graphs/"
-sns.set_theme(context = "paper", style = "white")
+sns.set_theme(context = "talk", style = "white")
 PNAME = "husl"
 NCOLORS = 6
 PALETTE = sns.color_palette(PNAME, NCOLORS)
 CMAP = [PALETTE[0]]*3 + [PALETTE[1]]*3 + [PALETTE[2]]*1 + [PALETTE[4]]*3
 
-csvs = sorted(glob.glob(os.path.join(DIR, "time_acc_*_*_[6,7,8,9]0_*.csv")))
+csvs = sorted(glob.glob(os.path.join(DIR, "time_acc_*_*_*_*.csv")))
 dfs = [pd.read_csv(f) for f in csvs]
 data = pd.concat(dfs, ignore_index = True)
 data["Accuracy"] = data["Decision"] == data["Truth"]
@@ -199,6 +199,20 @@ times = sns.relplot(data = data,
                     markers = True,
                     dashes = False,
                     legend = True)
+
+# Linear reference
+(times.map(sns.lineplot, x = [100, 500, 1000, 5000, 10000], 
+           y = [100*1e-6, 500*1e-6, 1000*1e-6, 5000*1e-6, 10000*1e-6], 
+           color="black", 
+           dashes=(1, 2), 
+           zorder=0))
+
+# Quadratic reference
+(times.map(sns.lineplot, x = [100, 500, 1000, 5000, 10000], 
+           y = [100**2*1e-6, 500**2*1e-6, 1000**2*1e-6, 5000**2*1e-6, 10000**2*1e-6], 
+           color="black", 
+           dashes=(6, 2), 
+           zorder=0))
 
 times.set_titles(r"$d$ = {col_name}")
 times.set_ylabels("Time (s)")
