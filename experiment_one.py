@@ -13,11 +13,11 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from matplotlib import colormaps as cm
 
-from spgeneos import SPGENEO, CycleGENEO, PathGENEO
-from subgraphs import triangles, rigids, augmented1, augmented2, augmented3
-from utils import compute_data, load_data
-from utils import accuracy_plot, accuracy_grid_plot, accuracy_comparison_plot
-from utils import optimize_alpha, select_forward
+from src.spgeneos import SPGENEO, CycleGENEO, PathGENEO
+from src.subgraphs import triangles, rigids, augmented1, augmented2, augmented3
+from src.utils import compute_data, load_data
+from src.utils import accuracy_plot, accuracy_grid_plot, accuracy_comparison_plot
+from src.utils import optimize_alpha, select_forward
 
 sns.set_theme(context = "paper", style = "white")
 

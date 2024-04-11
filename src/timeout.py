@@ -8,7 +8,7 @@ Functions to stop the execution of a function after a certain time.
 
 import signal
 import networkx as ntx
-from kwl import wl_k
+from src.kwl import wl_k
 
 class TimeoutException(Exception):
     """

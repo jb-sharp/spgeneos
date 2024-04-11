@@ -17,10 +17,10 @@ import seaborn as sns
 from tqdm import tqdm
 from matplotlib import pyplot as plt
 
-import timeout
-from spgeneos import SPGENEO, PathGENEO, CycleGENEO
-from subgraphs import triangles, rigids, augmented1, augmented2, augmented3
-from kwl import wl_1
+import src.timeout
+from src.spgeneos import SPGENEO, PathGENEO, CycleGENEO
+from src.subgraphs import triangles, rigids, augmented1, augmented2, augmented3
+from src.kwl import wl_1
 
 #%% Global options
 

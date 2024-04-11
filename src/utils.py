@@ -21,7 +21,7 @@ from sklearn.metrics import confusion_matrix
 from matplotlib import pyplot as plt
 from matplotlib.colors import to_hex
 
-from spgeneos import SPNetwork
+from src.spgeneos import SPNetwork
 
 #%% Data functions
 
