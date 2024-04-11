@@ -27,7 +27,7 @@ CMAP      = cm.get_cmap("Spectral_r")
 NORM      = False
 NMAX      = 100
 SEED      = 1215
-DIR       = "/home/giovanni/Documenti/Dottorato/Articoli e Conferenze/Grafi/Datasets/kreg/cno"
+DIR       = "</your/save/directory>"
 
 #%% Load subgraphs and subgraphs GENEOs
 

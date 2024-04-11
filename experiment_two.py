@@ -30,7 +30,7 @@ NSAMPLE   = 100
 SEED      = 60
 NORM      = False
 NMAX      = NNODES
-DIR       = "/home/giovanni/Documenti/Dottorato/Articoli e Conferenze/Grafi/Datasets/kreg/comparison_tuxedo"
+DIR       = "</your/save/directory>"
 SELECTED  = [21, 20, 3]
 TIMEOUT   = 10
 
@@ -168,7 +168,7 @@ for G1, G2 in tqdm(sample):
 
 #%% Evaluate results
 
-DIR = "/home/giovanni/Nextcloud/Graphs/"
+DIR = "</your/save/directory>"
 sns.set_theme(context = "talk", style = "white")
 PNAME = "husl"
 NCOLORS = 6
