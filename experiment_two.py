@@ -17,7 +17,7 @@ import seaborn as sns
 from tqdm import tqdm
 from matplotlib import pyplot as plt
 
-import src.timeout
+import src.timeout as timeout
 from src.spgeneos import SPGENEO, PathGENEO, CycleGENEO
 from src.subgraphs import triangles, rigids, augmented1, augmented2, augmented3
 from src.kwl import wl_1
@@ -169,7 +169,6 @@ for G1, G2 in tqdm(sample):
 #%% Evaluate results
 
 DIR = "</your/save/directory>"
-sns.set_theme(context = "talk", style = "white")
 PNAME = "husl"
 NCOLORS = 6
 PALETTE = sns.color_palette(PNAME, NCOLORS)
@@ -187,6 +186,7 @@ grouped["Accuracy"] = grouped["Accuracy"] / grouped["Count"]
 
 #%% Plot mean execution times
 
+sns.set_theme(context = "talk", style = "white")
 times = sns.relplot(data = data,
                     x = "Size",
                     y = "Time",

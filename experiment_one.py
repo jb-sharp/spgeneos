@@ -19,7 +19,7 @@ from src.utils import compute_data, load_data
 from src.utils import accuracy_plot, accuracy_grid_plot, accuracy_comparison_plot
 from src.utils import optimize_alpha, select_forward
 
-sns.set_theme(context = "paper", style = "white")
+sns.set_theme(context = "talk", style = "white")
 
 #%% Global options
 
