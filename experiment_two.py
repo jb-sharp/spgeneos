@@ -214,7 +214,7 @@ times = sns.relplot(data = data,
            dashes=(6, 2), 
            zorder=0))
 
-times.set_titles(r"$d$ = {col_name}")
+times.set_titles(r"$r$ = {col_name}")
 times.set_ylabels("Time (s)")
 times.set_xlabels(r"Size $N$")
 plt.yscale('log')
