@@ -22,6 +22,14 @@ from src.spgeneos import SPGENEO, PathGENEO, CycleGENEO
 from src.subgraphs import triangles, rigids, augmented1, augmented2, augmented3
 from src.kwl import wl_1
 
+#######################################################
+##  To exactly reproduce (at least accuracy) values  ##
+##  Please sample:                                   ##
+##        100 graph pairs with seed 60               ##
+##        200 graph pairs with seed 70               ##
+##        200 graph pairs with seed 80               ##
+#######################################################
+
 #%% Global options
 
 DEGREE    = 3
